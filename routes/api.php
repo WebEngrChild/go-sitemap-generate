@@ -17,12 +17,3 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-Route::get('/test', function () {
-    $testObj = [
-        'id' => '1',
-        'title' => 'タイトル',
-        'date' => '2020-04-01',
-    ];
-    return json_encode($testObj);
-});

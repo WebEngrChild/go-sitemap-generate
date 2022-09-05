@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/test', function () {
+    $testObj = [
+        'id' => '1',
+        'title' => 'タイトル',
+        'date' => '2020-04-01',
+    ];
+    return json_encode($testObj);
+});
