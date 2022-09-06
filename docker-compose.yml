@@ -3,10 +3,10 @@ version: '3'
 services:
     go-app: # サービス名
         container_name: go-app
-        build: ./docker/go # ①ビルドに使うDockerfileの場所
+        build: ./docker/go/ # ①ビルドに使うDockerfileの場所
         tty: true # ②コンテナの永続化
         volumes:
-            - ./go:/go/src/app # ③マウントディレクトリ
+            - ./go/:/go/src/app # ③マウントディレクトリ
         networks:
             - sail
 
